@@ -5,8 +5,12 @@ from __future__ import annotations
 
 import argparse
 import inspect
+import os
 import sys
 from pathlib import Path
+
+# TRL DPOTrainer rejects nn.DataParallel (Kaggle T4x2 exposes 2 GPUs by default).
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")
 
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
