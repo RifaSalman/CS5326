@@ -44,11 +44,12 @@ Guide configuration was followed for the main SFT and from-scratch DPO runs. Doc
 
 ## 4. Training Behavior
 
-*(Fill after Kaggle runs; figures live in `report/figures/`.)*
+Figures live in `report/figures/` (DPO curves already exported).
 
-- SFT: training/validation loss curves in `report/figures/sft/loss.png`.
+- SFT: training/validation loss curves in `report/figures/sft/loss.png` (export after local sync of Kaggle `metrics.jsonl`).
 - DPO-HH / DPO-UF: loss and reward accuracy/margin in `report/figures/dpo_*/`.
 - Checkpoint rule: SFT = best validation loss; DPO = best validation reward accuracy.
+- LoRA-DPO (SmolLM2-360M-Instruct, Ramsay persona, 220 preference pairs): completed on Kaggle T4 in ~206s wall time over 3 epochs; final `train_loss≈0.474`, `eval_loss≈0.365`. Adapter saved at `outputs/lora_persona_dpo/best`.
 
 ## 5. DPO-versus-SFT Results
 
