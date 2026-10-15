@@ -20,3 +20,4 @@ wandb/
 .ipynb_checkpoints/
 report/figures/*.png
 !report/figures/.gitkeep
+report/_pdf_images/
